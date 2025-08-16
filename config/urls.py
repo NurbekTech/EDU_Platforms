@@ -17,6 +17,9 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls.static import static
+
+from config import settings
 from apps.home.views import pageNotFound
 
 urlpatterns = [
@@ -24,5 +27,8 @@ urlpatterns = [
     path("", include("apps.home.urls")),
     path("blog/", include("apps.blog.urls")),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 handler404 = pageNotFound
