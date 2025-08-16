@@ -22,6 +22,7 @@ from apps.home.views import pageNotFound
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("apps.home.urls")),
+    path("blog/", include("apps.blog.urls")),
 ]
 
 handler404 = pageNotFound
