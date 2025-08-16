@@ -4,5 +4,6 @@ def menu_items(request):
         "menu_items": [
             {"name": "Главная", "url_name": "home"},
             {"name": "Блог", "url_name": "blog"},
+            {"name": "Контакты", "url_name": "home_contacts"},
         ]
     }
