@@ -13,7 +13,8 @@
             <img class="card__img" src="{{ p.photo.url }}" alt="">
             <div class="card__content">
                 <h3 class="card__title">{{p.title}}</h3>
-                <a href="#" class="card__link">Нажми меня</a>
+                <p>{{p.content|truncatewords:2}}</p>
+                <a href="{{ p.get_absolute_url }}" class="card__link">Нажми меня</a>
             </div>
         </div>
         {% endfor %}
