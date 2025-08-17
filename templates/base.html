@@ -11,18 +11,36 @@
 </head>
 
 <body>
-    <h1 class="base">Base Page</h1>
-    <ul>
-        {% for item in menu_items %}
-        <li>
-            <a href="{% url item.url_name %}">
-                {{ item.name }}
-            </a>
-        </li>
-        {% endfor %}
-    </ul>
-    {% block content %}
-    {% endblock content %}
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <!-- HEADER NAV-->
+            <div class="header__nav">
+                <a href="/" class="logo">NurbekTech</a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        {% for item in menu_items %}
+                        <li class="nav__item">
+                            <a href="{% url item.url_name %}" class="nav__link">{{ item.name }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </div>
+            <!-- END HEADER NAV-->
+        </div>
+    </header>
+    <!-- END HEADER -->
+
+    <!-- MAIN -->
+    <main class="main">
+        <div class="container">
+            {% block content %}
+            {% endblock content %}
+        </div>
+    </main>
+     <!-- END MAIN -->
+
 </body>
 
 </html>
