@@ -13,7 +13,7 @@ body {
 }
 
 .container {
-    max-width: 970px;
+    max-width: 1070px;
     padding: 0 30px;
     margin: 0 auto;
 }
@@ -22,14 +22,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    margin-bottom: 76px;
 }
 
 .nav__list {
     display: flex;
     column-gap: 25px;
     font-size: 14px;
-}
-
-.base {
-    color: blue;
 }

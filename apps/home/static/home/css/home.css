@@ -1,3 +1,14 @@
-h2 {
-    color: blueviolet;
+.main__row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main__content {
+    margin-top: 76px;
+    max-width: 500px;
+}
+
+.main__text {
+    font-weight: 600;
+    font-size: 44px;
 }
