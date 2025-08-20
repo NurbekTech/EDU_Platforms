@@ -6,9 +6,8 @@ from .models import *
 # Create your views here.
 def blog(request):
     posts = Post.objects.all()
-    cats = Category.objects.all()
 
-    date = {"posts": posts, "cats": cats}
+    date = {"posts": posts}
     return render(request, "blog/blog.html", context=date)
 
 
@@ -18,7 +17,5 @@ def show_post(request, post_id):
 
 def show_category(request, cat_id):
     posts = Post.objects.filter(cat_id=cat_id)
-    cats = Category.objects.all()
-    
-    date = {"posts": posts, "cats": cats}
+    date = {"posts": posts}
     return render(request, "blog/blog.html", context=date)

@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 {% load static %}
+{% load cats_tags %}
 
 {% block content %}
+{% getcats as cats %}
 <div class="blog">
     <div class="blog__title">
         <h2>Blog Page</h2>
