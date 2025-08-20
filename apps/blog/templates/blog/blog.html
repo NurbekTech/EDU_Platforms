@@ -7,6 +7,10 @@
         <h2>Blog Page</h2>
     </div>
 
+    {% for c in cats%}
+    <a href="{{ c.get_absolute_url }}">{{c}}</a>
+    {% endfor %}
+
     <div class="card__container">
         {% for p in posts%}
         <div class="card">
