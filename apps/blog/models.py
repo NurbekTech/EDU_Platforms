@@ -5,6 +5,9 @@ from django.urls import reverse
 # Create your models here.
 class Post(models.Model):
     title = models.CharField(max_length=255, verbose_name="Названия")
+    slug = models.SlugField(
+        max_length=255, unique=True, db_index=True, verbose_name="Slug_title"
+    )
     content = models.TextField(blank=True, verbose_name="Контент")
     photo = models.ImageField(upload_to="Photos/%Y/%m/%d/", verbose_name="Фото")
     is_published = models.BooleanField(default=True, verbose_name="Публикация")
@@ -16,7 +19,7 @@ class Post(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse("post", kwargs={"post_id": self.pk})
+        return reverse("post", kwargs={"post_slug": self.slug})
 
     class Meta:
         verbose_name = "Посты"
@@ -25,6 +28,9 @@ class Post(models.Model):
 
 class Category(models.Model):
     name = models.CharField(max_length=100, db_index=True, verbose_name="Категория")
+    slug = models.SlugField(
+        max_length=255, unique=True, db_index=True, verbose_name="Slug_name"
+    )
 
     def __str__(self):
         return self.name
