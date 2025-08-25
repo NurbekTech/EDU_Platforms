@@ -16,10 +16,11 @@
     <div class="card__container">
         {% for p in posts%}
         <div class="card">
-            <img class="card__img" src="{{ p.photo.url }}" alt="">
+            <div class="card__img">
+                <img src="{{ p.photo.url }}" alt="">
+            </div>
             <div class="card__content">
                 <h3 class="card__title">{{p.title}}</h3>
-                <p>{{p.content|truncatewords:2}}</p>
                 <a href="{{ p.get_absolute_url }}" class="card__link">Нажми меня</a>
             </div>
         </div>

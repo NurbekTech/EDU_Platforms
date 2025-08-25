@@ -1,14 +1,32 @@
 .card__container {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
-    margin-top: 50px;
+
 }
 
 .card {
-    width: 325px;
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2)
+    height: 220px;
+    width: 250px;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 5px 5px;
+    margin: 5px 5px;
+}
+
+.card__img {
+    border: 1px solid #9d9a9a;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    height: 140px;
+}
+
+.card__img img {
+    height: 140px;
+    border-radius: 10px;
+}
+
+.card__title {
+    margin: 6px 0px;
 }

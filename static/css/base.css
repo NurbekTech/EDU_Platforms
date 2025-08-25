@@ -13,7 +13,7 @@ body {
 }
 
 .container {
-    max-width: 1070px;
+    max-width: 870px;
     padding: 0 30px;
     margin: 0 auto;
 }
@@ -23,7 +23,7 @@ body {
     justify-content: space-between;
     align-items: center;
 
-    margin-bottom: 76px;
+    margin-bottom: 35px;
 }
 
 .nav__list {

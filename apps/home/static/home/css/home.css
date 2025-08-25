@@ -1,14 +1,25 @@
 .main__row {
     display: flex;
     justify-content: space-between;
+
+    margin: 70px 0px;
 }
 
 .main__content {
-    margin-top: 76px;
     max-width: 500px;
 }
 
 .main__text {
     font-weight: 600;
-    font-size: 44px;
+    font-size: 38px;
+}
+
+.main__subtext {
+    font-size: 16px;
+    padding-top: 12px;
+}
+
+.main__img {
+    display: flex;
+    align-items: center;
 }
