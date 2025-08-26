@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from django_ckeditor_5.fields import CKEditor5Field
 
 
 # Create your models here.
@@ -8,7 +9,7 @@ class Post(models.Model):
     slug = models.SlugField(
         max_length=255, unique=True, db_index=True, verbose_name="Slug_title"
     )
-    content = models.TextField(blank=True, verbose_name="Контент")
+    content = CKEditor5Field("Content", config_name="extends")
     photo = models.ImageField(upload_to="Photos/%Y/%m/%d/", verbose_name="Фото")
     is_published = models.BooleanField(default=True, verbose_name="Публикация")
     cat = models.ForeignKey(
